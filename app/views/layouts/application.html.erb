@@ -19,17 +19,22 @@
       <%= link_to "Panamericana", root_path, class: 'navbar-brand' %>
     </div>
   
-    <% if current_user %>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "My Tweets", tweets_path %></li>
-      </ul>
+      <% if current_user %>
+        <ul class="nav navbar-nav">
+          <li class="active"><%= link_to "My Tweets", tweets_path %></li>
+        </ul>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+        <% if !current_user %>
+          <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <% else %>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
-    <% end %>
+ 
   </nav>
   
 <%= yield %>
