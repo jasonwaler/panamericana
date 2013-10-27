@@ -1,4 +1,5 @@
 Tweeter::Application.routes.draw do
+  devise_for :models
   devise_for :users
   resources :tweets
 
