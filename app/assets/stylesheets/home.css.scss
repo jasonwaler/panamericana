@@ -15,3 +15,22 @@
     color: #ecf0f1;
   }
 }
+
+.tweet {
+  border: 1px solid #95a5a6;
+  background-color: #ecf0f1;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  
+  .body {
+    font-size: 14px;
+  }
+  
+  .email {
+    color: #95a5a6;
+  }
+  
+  .time {
+    color: #34495e;
+  }
+}
