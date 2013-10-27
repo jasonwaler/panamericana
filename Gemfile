@@ -12,6 +12,8 @@ group :development do
   gem 'sqlite3'
 end
 
+gem "bcrypt-ruby"
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'
