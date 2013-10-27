@@ -69,6 +69,6 @@ class TweetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
-      params[:tweet]
+      params[:tweet].permit :body
     end
 end
