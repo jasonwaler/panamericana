@@ -5,8 +5,8 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 gem 'devise'
-
 gem 'bootstrap-sass', '~> 3.0.0.0.rc'
+gem 'gravtastic'
 
 group :development do
   gem 'sqlite3'

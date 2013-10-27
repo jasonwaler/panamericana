@@ -3,6 +3,7 @@
 <div class='tweets'>
     <% @tweets.each do |tweet| %>
       <div class='tweet'>
+        <%= image_tag tweet.user.gravatar_url %>
         <p class='body'><%= tweet.body %></p>
         <p class='email'><%= tweet.user.email %></p>
         <p class='time'><%= distance_of_time_in_words Time.now, tweet.created_at %> ago</p> 
